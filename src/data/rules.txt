@@ -1,0 +1,51 @@
+<prog>              -> <begin> <st-list>                                            |   |
+<begin>             -> START declare ( strict_types = 1 ) ;                         |   |
+<st-list>           -> EOF                                                          |   |
+<st-list>           -> ?>                                                           |   |
+<st-list>           -> return <return>                                              |   |
+<st-list>           -> <prog-block> <st-list>                                       |   |
+<prog-block>        -> varID = <assig>                                              |   |
+<prog-block>        -> funID ( <params>                                             |   |
+<prog-block>        -> if ( <expr-br> { <constr-st-list> else { <constr-st-list>    |   |
+<prog-block>        -> while ( <expr-br> { <constr-st-list>                         |   |
+<prog-block>        -> function funID ( <dec-params> : <func>                       |   |
+<prog-block>        -> <expr>                                                       |   |
+<dec-params>        -> )                                                            |   |
+<dec-params>        -> type varID <dec-params-2>                                    |   |
+<dec-params>        -> ? type varID <dec-params-2>                                  |   |
+<dec-params-2>      -> , type varID <dec-params-2>                                  |   |
+<dec-params-2>      -> , ? type varID <dec-params-2>                                |   |
+<dec-params-2>      -> )                                                            |   |
+<func>              -> ? type { <constr-st-list>                                    |   |
+<func>              -> type { <constr-st-list>                                      |   |
+<constr-st-list>    -> }                                                            |   |
+<constr-st-list>    -> <constr-block> <constr-st-list>                              |   |
+<constr-block>      -> varID = <assig>                                              |   |
+<constr-block>      -> funID ( <params>                                             |   |
+<constr-block>      -> if ( <expr-br> { <constr-st-list> else { <constr-st-list>    |   |
+<constr-block>      -> while ( <expr-br> { <constr-st-list>                         |   |
+<constr-block>      -> return <return>                                              |   |
+<constr-block>      -> <expr>                                                       |   |
+<return>            -> ;                                                            |   |
+<return>            -> <expr>                                                       |   |
+<assig>             -> funID ( <params>                                             |   |
+<assig>             -> <expr>                                                       |   |
+<params>            -> ) ;                                                          |   |
+<params>            -> <params-2> ;                                                 |   |
+<params-2>          -> const <params-3>                                             |   |
+<params-2>          -> varID <params-3>                                             |   |
+<params-2>          -> null <params-3>                                              |   |
+<params-3>          -> )                                                            |   |
+<params-3>          -> , <params-2>                                                 |   |
+<expr>              -> const <expr-2>                                               |   |
+<expr>              -> varID <expr-2>                                               |   |
+<expr>              -> null <expr-2>                                                |   |
+<expr>              -> ( <expr-br> <expr-2>                                         |   |
+<expr-2>            -> ;                                                            |   |
+<expr-2>            -> oper <expr>                                                  |   |
+<expr-br>           -> const <expr-br-2>                                            |   |
+<expr-br>           -> varID <expr-br-2>                                            |   |
+<expr-br>           -> null <expr-br-2>                                             |   |
+<expr-br>           -> ( <expr-br> <expr-br-2>                                      |   |
+<expr-br-2>         -> )                                                            |   |
+<expr-br-2>         -> oper <expr-br>                                               |   #
