@@ -27,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Compile the source code: `make`
 
 ### Usage
-* Write the progrm in `/test_files/test.php`
+* Write the progrm in `./test_files/test.php`
 * Run `make test`
 
 ## Built With
