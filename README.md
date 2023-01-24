@@ -8,7 +8,7 @@
 
 This project is a C implementation of a compiler for the stripped-down PHP language. It is a school project for Formal Languages and Compilers. The goal of this project is to understand how compilers work and to learn how to create them.
 
-Project assignment `./doc/task 2022.pdf`
+Project assignment `./doc/Task 2022.pdf`
 
 
 ## Getting Started
