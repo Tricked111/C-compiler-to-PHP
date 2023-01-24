@@ -8,10 +8,13 @@
 
 This project is a C implementation of a compiler for the stripped-down PHP language. It is a school project for Formal Languages and Compilers. The goal of this project is to understand how compilers work and to learn how to create them.
 
+Project assignment `./doc/task 2022.pdf`
+
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
 
 ### Prerequisites
 
@@ -24,7 +27,8 @@ These instructions will get you a copy of the project up and running on your loc
 * Compile the source code: `make`
 
 ### Usage
-* Run the executable file: `./IFJ22 < example.code`
+* Write the progrm in `/test_files/test.php`
+* Run `make test`
 
 ## Built With
 * C programming language
